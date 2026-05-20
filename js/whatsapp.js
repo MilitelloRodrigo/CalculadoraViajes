@@ -69,8 +69,3 @@ export function copyFoodSummaryToClipboard() {
     .then(() => showToast("¡Resumen de Comida copiado! Pegalo en WhatsApp 📲", "success"))
     .catch(err => showToast("No se pudo copiar automáticamente.", "danger"));
 }
-  
-  navigator.clipboard.writeText(txt)
-    .then(() => showToast("¡Resumen de Comida copiado! Pegalo en WhatsApp 📲", "success"))
-    .catch(err => showToast("No se pudo copiar automáticamente.", "danger"));
-}
