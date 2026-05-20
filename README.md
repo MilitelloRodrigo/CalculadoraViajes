@@ -1,34 +1,36 @@
-# ViajeSplit 🚗💸 — Calculadora Proporcional de Gastos de Viajes
+# Sin Ratonear 🐀💸 — Calculadora de Viajes y Comidas sin mezquindades
 
-**ViajeSplit** es una aplicación web 100% estática, moderna, ultra-rápida y adaptable ("Mobile-First"), ideal para dividir los gastos de viajes grupales de forma justa y proporcional según la cantidad de veces (o tramos) que haya viajado cada persona. 
+**Sin Ratonear** es una aplicación web 100% estática, moderna, ultra-rápida y adaptable ("Mobile-First"), ideal para dividir de manera justa y equitativa los gastos de viajes (proporcional por tramos) y de comidas (en partes iguales) entre amigos o familias.
 
-Perfecta para cargarse desde el navegador del celular en plena ruta o al regresar de una escapada de fin de semana, guardando todos los datos localmente sin requerir base de datos ni registros.
+Diseñada especialmente para abrirse desde el navegador de cualquier celular en plena ruta o al terminar la juntada, guardando todos los datos localmente de forma privada sin requerir base de datos ni registros.
 
 ---
 
 ## ✨ Características Principales
 
-- **División Proporcional Exacta**: A diferencia de los divisores comunes, calcula la cuota según la cantidad de tramos/viajes que hizo cada integrante. Si viajaste más, pagás más.
-- **Modo Claro y Oscuro**: Se adapta a la preferencia de tu sistema operativo y permite el cambio manual de forma instantánea.
-- **Estilo Glassmorphism Premium**: Diseñado con una interfaz visual limpia y elegante usando variables HSL, fuentes modernas y micro-animaciones fluidas.
-- **Registro Detallado**: Permite cargar gastos por categorías específicas:
-  - 🚗 Nafta / Gasoil
-  - 🛣️ Peajes
-  - 🍔 Comida
-  - 🏨 Hospedaje
-  - ⚙️ Otros
-- **Liquidación Inteligente**: Aplica un algoritmo optimizado de flujo de efectivo para resolver las deudas con la menor cantidad posible de transferencias (quién le debe a quién).
-- **Copiar Resumen para WhatsApp**: Exporta instantáneamente el estado completo de las cuentas, balances y deudas formateado de manera elegante con emojis listo para pegar en el grupo del viaje.
-- **Privado y Offline**: Tus datos nunca salen de tu dispositivo. Persisten de forma segura en el `localStorage` del navegador.
+- **Dos Modalidades en Uno**:
+  - 🚗 **Gastos de Viaje (Tramos)**: Calcula la cuota proporcional exacta según la cantidad de tramos/viajes que hizo cada integrante. Si viajaste en todos los tramos pagás más; si te bajaste antes, pagás lo justo.
+  - 🍔 **Gastos de Comida (Igualitario)**: Divide los gastos de la comida en partes exactamente iguales entre todos los participantes.
+- **Liquidación Inteligente (Algoritmo Greedy)**: Aplica un algoritmo optimizado de flujo de efectivo para resolver las deudas con la menor cantidad posible de transferencias bancarias (quién le debe a quién).
+- **Estilo Glassmorphism Premium**: Diseñado con una interfaz visual limpia y elegante usando variables HSL, fuentes modernas, modo oscuro y micro-animaciones fluidas.
+- **Copiar Resumen para WhatsApp**: Exporta instantáneamente el estado completo de las cuentas, balances y deudas formateado en formato ultra-compacto listo para pegar en el grupo del viaje o asado.
+- **Privado y Offline**: Tus datos nunca salen de tu dispositivo. Persisten de forma segura en el `localStorage` del navegador de cada usuario.
 
 ---
 
-## 🛠️ Estructura del Código
+## 🧱 Estructura de Código Modular y Moderna
 
-El proyecto es totalmente autocontenido y estático:
-- `index.html`: Estructura semántica, accesibilidad y sprites SVG integrados.
+La aplicación está construida sobre estándares web modernos, estructurada de forma modular mediante **Componentes Web Nativos (Custom Elements)** y **Módulos ES6** sin usar frameworks pesados:
+
+- `index.html`: Estructura semántica ultra-limpia basada en Web Components nativos.
 - `style.css`: Estilos visuales adaptables ("Mobile-First"), animaciones y variables de color.
-- `app.js`: Motor de cálculo matemático, estado reactivo y algoritmo de liquidación.
+- `js/main.js`: Punto de entrada de la aplicación y registro de componentes.
+- `js/state.js`: Gestor del estado de la aplicación, persistencia en caché y migraciones.
+- `js/math.js`: Motores matemáticos de reparto proporcional, reparto igualitario de comida y liquidación mínima.
+- `js/dom.js`: Renderizado dinámico y reactividad en el DOM.
+- `js/whatsapp.js`: Compilador de reportes en texto enriquecido listos para copiar.
+- `js/utils.js`: Generadores de IDs, formateadores de moneda, sanitizadores y notificaciones flotantes (Toasts).
+- `js/components/`: Colección de 10 Componentes Web Nativos que encapsulan los elementos de la interfaz (cabeceras, grilla de métricas, formularios, listas de gastos y liquidaciones).
 
 ---
 
@@ -36,7 +38,7 @@ El proyecto es totalmente autocontenido y estático:
 
 Para subir esta aplicación y usarla gratis en internet:
 1. Creá un repositorio público en GitHub (por ejemplo, `CalculadoraViajes`).
-2. Subí estos archivos (`index.html`, `style.css`, `app.js`, `README.md`).
+2. Subí estos archivos (`index.html`, `style.css`, `js/`, `README.md`).
 3. Ve a la sección **Settings** (Configuración) de tu repositorio.
 4. En el menú izquierdo, haz clic en **Pages**.
 5. Bajo **Build and deployment**, selecciona la rama `main` (o la principal) y la carpeta `/ (root)`.
@@ -45,27 +47,4 @@ Para subir esta aplicación y usarla gratis en internet:
 
 ---
 
-## 📝 Ejemplo de Cálculo Proporcional
-
-Imaginen un viaje compartido donde:
-1. **Participantes**:
-   - **Juan** viajó en **3 tramos**.
-   - **Pedro** viajó en **2 tramos**.
-   - **Ana** viajó en **1 tramo**.
-   - *Total de viajes acumulados en el grupo:* **6 viajes**.
-
-2. **Gastos**:
-   - Juan pagó la carga de combustible por **$6.000**.
-   - *Costo unitario por viaje:* $6.000 / 6 = **$1.000 por viaje**.
-
-3. **Cálculo de Deudas**:
-   - **Juan** (3 viajes): Le corresponde pagar $3.000. Como pagó $6.000, su saldo es **+$3.000 (A favor)**.
-   - **Pedro** (2 viajes): Le corresponde pagar $2.000. Como pagó $0, su saldo es **-$2.000 (Debe)**.
-   - **Ana** (1 viaje): Le corresponde pagar $1.000. Como pagó $0, su saldo es **-$1.000 (Debe)**.
-
-4. **Liquidación Mínima**:
-   - *Pedro le debe pagar $2.000 a Juan.*
-   - *Ana le debe pagar $1.000 a Juan.*
-
----
-*Desarrollado para ruteros amantes del viaje libre y las cuentas claras. 🌍✨*
+*Desarrollado con ❤️ para grupos de amigos amantes de las cuentas claras y los viajes sin ratonear. 🐀✨*

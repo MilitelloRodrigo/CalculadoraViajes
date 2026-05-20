@@ -9,9 +9,9 @@ class ViajeHeader extends HTMLElement {
     this.innerHTML = `
       <header class="app-header">
         <div class="logo-area">
-          <span class="logo-emoji">🧢</span>
+          <span class="logo-emoji">🐀</span>
           <div class="title-meta">
-            <h1>A la Gorra</h1>
+            <h1>Sin Ratonear</h1>
             <p>Calculadora de Viajes y Comidas Grupales</p>
           </div>
         </div>

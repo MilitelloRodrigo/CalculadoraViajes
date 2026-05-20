@@ -16,7 +16,7 @@ export function copyTravelSummaryToClipboard() {
     return;
   }
   
-  let txt = `🧢 *A la Gorra (Viajes)* 🧢\n`;
+  let txt = `🐀 *Sin Ratonear (Viajes)* 🐀\n`;
   txt += `=========================\n\n`;
   
   txt += `📈 *Resumen:*\n`;
@@ -32,7 +32,7 @@ export function copyTravelSummaryToClipboard() {
     });
   }
   
-  txt += `\n🚀 _Liquidado con A la Gorra 🧢_`;
+  txt += `\n🚀 _Liquidado con Sin Ratonear 🐀_`;
   
   navigator.clipboard.writeText(txt)
     .then(() => showToast("¡Resumen de Viajes copiado! Pegalo en WhatsApp 📲", "success"))
@@ -47,7 +47,7 @@ export function copyFoodSummaryToClipboard() {
     return;
   }
   
-  let txt = `🍔 *A la Gorra (Comida)* 🍔\n`;
+  let txt = `🍔 *Sin Ratonear (Comida)* 🍔\n`;
   txt += `=========================\n\n`;
   
   txt += `📈 *Resumen:*\n`;
@@ -63,7 +63,7 @@ export function copyFoodSummaryToClipboard() {
     });
   }
   
-  txt += `\n🚀 _Liquidado con A la Gorra 🧢_`;
+  txt += `\n🚀 _Liquidado con Sin Ratonear 🐀_`;
   
   navigator.clipboard.writeText(txt)
     .then(() => showToast("¡Resumen de Comida copiado! Pegalo en WhatsApp 📲", "success"))
