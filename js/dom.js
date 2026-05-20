@@ -120,7 +120,7 @@ function renderTravelSubPanels(results) {
     tripsList.innerHTML = `
       <div class="empty-state">
         <span class="empty-emoji">🛣️</span>
-        <p>No hay viajes creados. Cargá participantes y añadí un viaje arriba.</p>
+        <p>No hay viajes creados. Cargá participantes y añadí un viaje abajo.</p>
       </div>
     `;
   } else {

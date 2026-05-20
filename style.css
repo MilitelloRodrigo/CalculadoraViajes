@@ -666,6 +666,8 @@ select:focus {
 
 .margin-top-sm { margin-top: 8px; }
 .margin-top-md { margin-top: 16px; }
+.margin-bottom-sm { margin-bottom: 8px; }
+.margin-bottom-md { margin-bottom: 16px; }
 
 /* ==========================================================================
    DYNAMIC LISTS & ELEMENT CONTAINERS
