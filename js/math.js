@@ -1,14 +1,14 @@
 /* ==========================================================================
    VIAJESPLIT MATHEMATICAL ENGINES
    Core business formulas for:
-   - Proportional Travel splits by Tramos (Tramos Engine)
+   - Proportional Travel splits (Travel Engine)
    - Flat Equal Food sharing splits (Food Engine)
    - Minimizing transactions using the Greedy Debt Settlement Solver.
    ========================================================================== */
 
 import { state } from './state.js';
 
-// 🚗 ENGINE A: TRAVEL SPLIT (PROPORTIONAL BY TRAMOS)
+// 🚗 ENGINE A: TRAVEL SPLIT (PROPORTIONAL BY TRIPS)
 export function computeTravelSplitResults() {
   const totalExpense = state.expenses.reduce((sum, exp) => sum + exp.amount, 0);
   const activeTripsCount = state.trips.length;
@@ -20,7 +20,7 @@ export function computeTravelSplitResults() {
     
   const generalSharePerTrip = activeTripsCount > 0 ? generalExpensesTotal / activeTripsCount : 0;
   
-  // 2. Compute Costs per individual trip (tramo)
+  // 2. Compute Costs per individual trip
   const tripCosts = state.trips.map(trip => {
     const passengersCount = trip.participantIds.length;
     

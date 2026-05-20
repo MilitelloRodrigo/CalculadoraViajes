@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const newPartId = generateId();
       state.participants.push({ id: newPartId, name });
       
-      // Auto-add new traveler to all existing tramos
+      // Auto-add new traveler to all existing trips
       state.trips.forEach(trip => {
         trip.participantIds.push(newPartId);
       });
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Add Trip (Tramo) button click
+  // Add Trip button click
   const addTripBtn = document.getElementById('add-trip-btn');
   if (addTripBtn) {
     addTripBtn.addEventListener('click', () => {

@@ -28,7 +28,7 @@ class ViajeResults extends HTMLElement {
           </div>
           
           <div class="settlements-wrapper" id="settlements-list">
-            <div class="empty-state-small">Todos al día. ¡No hay deudas de tramos pendientes! 🎉</div>
+            <div class="empty-state-small">Todos al día. ¡No hay deudas de viajes pendientes! 🎉</div>
           </div>
         </div>
 

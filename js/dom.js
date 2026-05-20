@@ -120,7 +120,7 @@ function renderTravelSubPanels(results) {
     tripsList.innerHTML = `
       <div class="empty-state">
         <span class="empty-emoji">🛣️</span>
-        <p>No hay tramos creados. Cargá participantes y añadí un viaje arriba.</p>
+        <p>No hay viajes creados. Cargá participantes y añadí un viaje arriba.</p>
       </div>
     `;
   } else {
@@ -248,7 +248,7 @@ function renderTravelSubPanels(results) {
   
   // Travel Settlements List
   if (results.settlements.length === 0) {
-    settlementsList.innerHTML = `<div class="empty-state-small">Todos al día. ¡No hay deudas de tramos pendientes! 🎉</div>`;
+    settlementsList.innerHTML = `<div class="empty-state-small">Todos al día. ¡No hay deudas de viajes pendientes! 🎉</div>`;
   } else {
     settlementsList.innerHTML = results.settlements.map(s => {
       return `

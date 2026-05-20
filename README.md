@@ -9,7 +9,7 @@ Diseñada especialmente para abrirse desde el navegador de cualquier celular en 
 ## ✨ Características Principales
 
 - **Dos Modalidades en Uno**:
-  - 🚗 **Gastos de Viaje (Tramos)**: Calcula la cuota proporcional exacta según la cantidad de tramos/viajes que hizo cada integrante. Si viajaste en todos los tramos pagás más; si te bajaste antes, pagás lo justo.
+  - 🚗 **Gastos de Viaje**: Calcula la cuota proporcional exacta según la cantidad de tramos/viajes que hizo cada integrante. Si viajaste en todos los tramos pagás más; si te bajaste antes, pagás lo justo.
   - 🍔 **Gastos de Comida (Igualitario)**: Divide los gastos de la comida en partes exactamente iguales entre todos los participantes.
 - **Liquidación Inteligente (Algoritmo Greedy)**: Aplica un algoritmo optimizado de flujo de efectivo para resolver las deudas con la menor cantidad posible de transferencias bancarias (quién le debe a quién).
 - **Estilo Glassmorphism Premium**: Diseñado con una interfaz visual limpia y elegante usando variables HSL, fuentes modernas, modo oscuro y micro-animaciones fluidas.
@@ -37,6 +37,7 @@ La aplicación está construida sobre estándares web modernos, estructurada de 
 ## 🚀 Despliegue en GitHub Pages
 
 Para subir esta aplicación y usarla gratis en internet:
+
 1. Creá un repositorio público en GitHub (por ejemplo, `CalculadoraViajes`).
 2. Subí estos archivos (`index.html`, `style.css`, `js/`, `README.md`).
 3. Ve a la sección **Settings** (Configuración) de tu repositorio.
@@ -47,4 +48,4 @@ Para subir esta aplicación y usarla gratis en internet:
 
 ---
 
-*Desarrollado con ❤️ para grupos de amigos amantes de las cuentas claras y los viajes sin ratonear. 🐀✨*
+_Desarrollado con ❤️ para grupos de amigos amantes de las cuentas claras y los viajes sin ratonear. 🐀✨_

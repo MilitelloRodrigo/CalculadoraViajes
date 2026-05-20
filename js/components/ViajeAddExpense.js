@@ -24,7 +24,6 @@ class ViajeAddExpense extends HTMLElement {
                 <option value="nafta">🚗 Nafta / Gasoil</option>
                 <option value="peaje">🛣️ Peaje</option>
                 <option value="comida">🍔 Comida</option>
-                <option value="alojamiento">🏨 Hospedaje</option>
                 <option value="otros" selected>⚙️ Otros</option>
               </select>
             </div>
